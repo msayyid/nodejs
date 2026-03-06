@@ -3,6 +3,7 @@
 // Import async file system methods (non-blocking)
 const { readFile, writeFile } = require("fs");
 
+console.log("start");
 // Start reading first.txt
 // Node will read it in background and call this function when done
 readFile("content/first.txt", "utf8", (err, result) => {
@@ -42,11 +43,12 @@ readFile("content/first.txt", "utf8", (err, result) => {
 
                 // If successful, result is undefined (writeFile returns no data)
                 console.log(result, "success");
+                console.log("done with this task");
             }
         );
     });
 });
-
+console.log("starting next task")
 // Correct final understanding:
 // Start reading first.txt
 // When it finishes, callback runs

@@ -3,6 +3,7 @@
 
 // Destructuring specific methods from the fs module
 const { readFileSync, writeFileSync, readFile } = require("fs");
+console.log("start");
 
 // Importing vm module (not used here)
 // runInThisContext executes JS code inside current V8 context
@@ -31,7 +32,8 @@ writeFileSync(
   `here is the result: ${first}, ${second}`,
   { flag: "a" }
 );
-
+console.log("done with this task")
+console.log("starting the next one")
 
 // Read the updated file to verify the result
 // 'utf-8' and 'utf8' are equivalent
